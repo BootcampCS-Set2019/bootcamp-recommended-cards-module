@@ -1,0 +1,4 @@
+github "BootcampCS-Set2019/bootcamp-components" "26baf3503e298dbcedda8ba8abc7087961215c4f"
+github "BootcampCS-Set2019/bootcamp-resources" "6bab4a61dda817c3797145e4ddc93803a9b6e66c"
+github "Quick/Nimble" "v8.0.4"
+github "Quick/Quick" "v2.2.0"
