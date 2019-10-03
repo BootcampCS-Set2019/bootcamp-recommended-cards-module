@@ -9,13 +9,26 @@
 /* Begin PBXBuildFile section */
 		BDAFF44A2346737E000256FF /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4482346737E000256FF /* Components.framework */; };
 		BDAFF44B2346737E000256FF /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4492346737E000256FF /* Resources.framework */; };
-		BDAFF44D2346738D000256FF /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAFF44C2346738D000256FF /* TestFile.swift */; };
+		BDAFF48923468C60000256FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAFF48823468C60000256FF /* AppDelegate.swift */; };
+		BDAFF48B23468C60000256FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAFF48A23468C60000256FF /* ViewController.swift */; };
+		BDAFF48E23468C60000256FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF48C23468C60000256FF /* Main.storyboard */; };
+		BDAFF49023468C61000256FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF48F23468C61000256FF /* Assets.xcassets */; };
+		BDAFF49323468C61000256FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF49123468C61000256FF /* LaunchScreen.storyboard */; };
+		BDAFF49823468CCE000256FF /* RecommendedCardsModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */; };
+		BDAFF49923468CCE000256FF /* RecommendedCardsModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BDB7EA3E234640FD002FB416 /* RecommendedCardsModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */; };
 		BDB7EA43234640FD002FB416 /* RecommendedCardsModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7EA42234640FD002FB416 /* RecommendedCardsModuleTests.swift */; };
 		BDB7EA45234640FE002FB416 /* RecommendedCardsModule.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB7EA37234640FD002FB416 /* RecommendedCardsModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		BDAFF49A23468CCE000256FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDB7EA2B234640FD002FB416 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDB7EA33234640FD002FB416;
+			remoteInfo = RecommendedCardsModule;
+		};
 		BDB7EA3F234640FD002FB416 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BDB7EA2B234640FD002FB416 /* Project object */;
@@ -25,10 +38,30 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BDAFF49C23468CCE000256FF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BDAFF49923468CCE000256FF /* RecommendedCardsModule.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BDAFF4482346737E000256FF /* Components.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Components.framework; path = Carthage/Build/iOS/Components.framework; sourceTree = "<group>"; };
 		BDAFF4492346737E000256FF /* Resources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Resources.framework; path = Carthage/Build/iOS/Resources.framework; sourceTree = "<group>"; };
-		BDAFF44C2346738D000256FF /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
+		BDAFF48623468C60000256FF /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDAFF48823468C60000256FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BDAFF48A23468C60000256FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BDAFF48D23468C60000256FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BDAFF48F23468C61000256FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDAFF49223468C61000256FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BDAFF49423468C61000256FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecommendedCardsModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB7EA37234640FD002FB416 /* RecommendedCardsModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendedCardsModule.h; sourceTree = "<group>"; };
 		BDB7EA38234640FD002FB416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +71,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BDAFF48323468C60000256FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDAFF49823468CCE000256FF /* RecommendedCardsModule.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDB7EA31234640FD002FB416 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -67,11 +108,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BDAFF48723468C60000256FF /* Sample */ = {
+			isa = PBXGroup;
+			children = (
+				BDAFF48823468C60000256FF /* AppDelegate.swift */,
+				BDAFF48A23468C60000256FF /* ViewController.swift */,
+				BDAFF48C23468C60000256FF /* Main.storyboard */,
+				BDAFF48F23468C61000256FF /* Assets.xcassets */,
+				BDAFF49123468C61000256FF /* LaunchScreen.storyboard */,
+				BDAFF49423468C61000256FF /* Info.plist */,
+			);
+			path = Sample;
+			sourceTree = "<group>";
+		};
 		BDB7EA2A234640FD002FB416 = {
 			isa = PBXGroup;
 			children = (
 				BDB7EA36234640FD002FB416 /* RecommendedCardsModule */,
 				BDB7EA41234640FD002FB416 /* RecommendedCardsModuleTests */,
+				BDAFF48723468C60000256FF /* Sample */,
 				BDB7EA35234640FD002FB416 /* Products */,
 				BDAFF4472346737D000256FF /* Frameworks */,
 			);
@@ -82,6 +137,7 @@
 			children = (
 				BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */,
 				BDB7EA3D234640FD002FB416 /* RecommendedCardsModuleTests.xctest */,
+				BDAFF48623468C60000256FF /* Sample.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,7 +147,6 @@
 			children = (
 				BDB7EA37234640FD002FB416 /* RecommendedCardsModule.h */,
 				BDB7EA38234640FD002FB416 /* Info.plist */,
-				BDAFF44C2346738D000256FF /* TestFile.swift */,
 			);
 			path = RecommendedCardsModule;
 			sourceTree = "<group>";
@@ -119,6 +174,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		BDAFF48523468C60000256FF /* Sample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BDAFF49523468C61000256FF /* Build configuration list for PBXNativeTarget "Sample" */;
+			buildPhases = (
+				BDAFF48223468C60000256FF /* Sources */,
+				BDAFF48323468C60000256FF /* Frameworks */,
+				BDAFF48423468C60000256FF /* Resources */,
+				BDAFF49C23468CCE000256FF /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BDAFF49B23468CCE000256FF /* PBXTargetDependency */,
+			);
+			name = Sample;
+			productName = Sample;
+			productReference = BDAFF48623468C60000256FF /* Sample.app */;
+			productType = "com.apple.product-type.application";
+		};
 		BDB7EA33234640FD002FB416 /* RecommendedCardsModule */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDB7EA48234640FE002FB416 /* Build configuration list for PBXNativeTarget "RecommendedCardsModule" */;
@@ -169,6 +243,9 @@
 				LastUpgradeCheck = 1030;
 				ORGANIZATIONNAME = "BootcampCS-Set2019";
 				TargetAttributes = {
+					BDAFF48523468C60000256FF = {
+						CreatedOnToolsVersion = 10.3;
+					};
 					BDB7EA33234640FD002FB416 = {
 						CreatedOnToolsVersion = 10.3;
 						LastSwiftMigration = 1030;
@@ -184,6 +261,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = BDB7EA2A234640FD002FB416;
 			productRefGroup = BDB7EA35234640FD002FB416 /* Products */;
@@ -192,11 +270,22 @@
 			targets = (
 				BDB7EA33234640FD002FB416 /* RecommendedCardsModule */,
 				BDB7EA3C234640FD002FB416 /* RecommendedCardsModuleTests */,
+				BDAFF48523468C60000256FF /* Sample */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BDAFF48423468C60000256FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDAFF49323468C61000256FF /* LaunchScreen.storyboard in Resources */,
+				BDAFF49023468C61000256FF /* Assets.xcassets in Resources */,
+				BDAFF48E23468C60000256FF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDB7EA32234640FD002FB416 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -291,11 +380,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BDAFF48223468C60000256FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDAFF48B23468C60000256FF /* ViewController.swift in Sources */,
+				BDAFF48923468C60000256FF /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDB7EA30234640FD002FB416 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDAFF44D2346738D000256FF /* TestFile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +407,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		BDAFF49B23468CCE000256FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDB7EA33234640FD002FB416 /* RecommendedCardsModule */;
+			targetProxy = BDAFF49A23468CCE000256FF /* PBXContainerItemProxy */;
+		};
 		BDB7EA40234640FD002FB416 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = BDB7EA33234640FD002FB416 /* RecommendedCardsModule */;
@@ -317,7 +419,62 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		BDAFF48C23468C60000256FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDAFF48D23468C60000256FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BDAFF49123468C61000256FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BDAFF49223468C61000256FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		BDAFF49623468C61000256FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DVMDCJRNKS;
+				INFOPLIST_FILE = Sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bootcamp.set2019.Sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BDAFF49723468C61000256FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DVMDCJRNKS;
+				INFOPLIST_FILE = Sample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.bootcamp.set2019.Sample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BDB7EA46234640FE002FB416 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -504,7 +661,6 @@
 		BDB7EA4C234640FE002FB416 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
@@ -524,7 +680,6 @@
 		BDB7EA4D234640FE002FB416 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
@@ -544,6 +699,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BDAFF49523468C61000256FF /* Build configuration list for PBXNativeTarget "Sample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BDAFF49623468C61000256FF /* Debug */,
+				BDAFF49723468C61000256FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BDB7EA2E234640FD002FB416 /* Build configuration list for PBXProject "RecommendedCardsModule" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
