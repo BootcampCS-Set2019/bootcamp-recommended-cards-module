@@ -6,4 +6,26 @@
 //  Copyright © 2019 BootcampCS-Set2019. All rights reserved.
 //
 
-import Foundation
+import Entities
+
+class  RecommendedCardsPresenter {
+    var interactor: RecomendedCardsInteractorProtocol?
+}
+
+extension RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
+    func fetchSets() {
+        self.interactor?.fetchSets()
+    }
+
+    func fetchNextSetCards() {
+        self.interactor?.fetchNextSetCards()
+    }
+
+    func interactor(didfailWith exception: InteractorException) {
+        //TODO: Notify view
+    }
+
+    func interactor(didGetCards: [MagicCard], forSet: MagicCardSet) {
+        //TODO: Notify view
+    }
+}
