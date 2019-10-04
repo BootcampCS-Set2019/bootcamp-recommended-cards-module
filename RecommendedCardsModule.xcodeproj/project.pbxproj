@@ -19,6 +19,11 @@
 		BDB7EA3E234640FD002FB416 /* RecommendedCardsModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */; };
 		BDB7EA43234640FD002FB416 /* RecommendedCardsModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7EA42234640FD002FB416 /* RecommendedCardsModuleTests.swift */; };
 		BDB7EA45234640FE002FB416 /* RecommendedCardsModule.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB7EA37234640FD002FB416 /* RecommendedCardsModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCC7FF762347BF5800B60A48 /* Repositories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DCC7FF752347BF5800B60A48 /* Repositories.framework */; };
+		DCC7FF782347BFE500B60A48 /* RecomendedCardsInteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7FF772347BFE500B60A48 /* RecomendedCardsInteractorProtocol.swift */; };
+		DCC7FF7D2347C7E100B60A48 /* RecommendedCardsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7FF7C2347C7E100B60A48 /* RecommendedCardsInteractor.swift */; };
+		DCC7FF802347D90E00B60A48 /* RecommendedCardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7FF7F2347D90E00B60A48 /* RecommendedCardsPresenter.swift */; };
+		DCC7FF822347D92500B60A48 /* RecommendedCardsPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC7FF812347D92500B60A48 /* RecommendedCardsPresenterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +73,11 @@
 		BDB7EA3D234640FD002FB416 /* RecommendedCardsModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecommendedCardsModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB7EA42234640FD002FB416 /* RecommendedCardsModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsModuleTests.swift; sourceTree = "<group>"; };
 		BDB7EA44234640FE002FB416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCC7FF752347BF5800B60A48 /* Repositories.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Repositories.framework; path = Carthage/Build/iOS/Repositories.framework; sourceTree = "<group>"; };
+		DCC7FF772347BFE500B60A48 /* RecomendedCardsInteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomendedCardsInteractorProtocol.swift; sourceTree = "<group>"; };
+		DCC7FF7C2347C7E100B60A48 /* RecommendedCardsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsInteractor.swift; sourceTree = "<group>"; };
+		DCC7FF7F2347D90E00B60A48 /* RecommendedCardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsPresenter.swift; sourceTree = "<group>"; };
+		DCC7FF812347D92500B60A48 /* RecommendedCardsPresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsPresenterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC7FF762347BF5800B60A48 /* Repositories.framework in Frameworks */,
 				BDAFF44A2346737E000256FF /* Components.framework in Frameworks */,
 				BDAFF44B2346737E000256FF /* Resources.framework in Frameworks */,
 			);
@@ -102,6 +113,7 @@
 		BDAFF4472346737D000256FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DCC7FF752347BF5800B60A48 /* Repositories.framework */,
 				BDAFF4482346737E000256FF /* Components.framework */,
 				BDAFF4492346737E000256FF /* Resources.framework */,
 			);
@@ -145,6 +157,8 @@
 		BDB7EA36234640FD002FB416 /* RecommendedCardsModule */ = {
 			isa = PBXGroup;
 			children = (
+				DCC7FF7E2347D85E00B60A48 /* Presenter */,
+				DCC7FF7B2347C62F00B60A48 /* Interactor */,
 				BDB7EA37234640FD002FB416 /* RecommendedCardsModule.h */,
 				BDB7EA38234640FD002FB416 /* Info.plist */,
 			);
@@ -158,6 +172,24 @@
 				BDB7EA44234640FE002FB416 /* Info.plist */,
 			);
 			path = RecommendedCardsModuleTests;
+			sourceTree = "<group>";
+		};
+		DCC7FF7B2347C62F00B60A48 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				DCC7FF772347BFE500B60A48 /* RecomendedCardsInteractorProtocol.swift */,
+				DCC7FF7C2347C7E100B60A48 /* RecommendedCardsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		DCC7FF7E2347D85E00B60A48 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				DCC7FF812347D92500B60A48 /* RecommendedCardsPresenterProtocol.swift */,
+				DCC7FF7F2347D90E00B60A48 /* RecommendedCardsPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,12 +362,14 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Components.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Resources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Repositories.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Components.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Resources.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Repositories.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -393,6 +427,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC7FF822347D92500B60A48 /* RecommendedCardsPresenterProtocol.swift in Sources */,
+				DCC7FF7D2347C7E100B60A48 /* RecommendedCardsInteractor.swift in Sources */,
+				DCC7FF802347D90E00B60A48 /* RecommendedCardsPresenter.swift in Sources */,
+				DCC7FF782347BFE500B60A48 /* RecomendedCardsInteractorProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +480,7 @@
 		BDAFF49623468C61000256FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
@@ -460,6 +499,7 @@
 		BDAFF49723468C61000256FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
@@ -661,6 +701,7 @@
 		BDB7EA4C234640FE002FB416 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
@@ -680,6 +721,7 @@
 		BDB7EA4D234640FE002FB416 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";

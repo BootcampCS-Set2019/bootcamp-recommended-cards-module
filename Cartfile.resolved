@@ -1,4 +1,6 @@
-github "BootcampCS-Set2019/bootcamp-components" "26baf3503e298dbcedda8ba8abc7087961215c4f"
-github "BootcampCS-Set2019/bootcamp-resources" "6bab4a61dda817c3797145e4ddc93803a9b6e66c"
+github "BootcampCS-Set2019/bootcamp-components" "d9973189e58c4c906af37c7fc1c5469191a3b7e5"
+github "BootcampCS-Set2019/bootcamp-entities" "c69a962b09b41c22cb7acec6ffa5716b41644e27"
+github "BootcampCS-Set2019/bootcamp-repositories" "605d5daf94d74eb5bb1543a3f3a4803b17cfab3c"
+github "BootcampCS-Set2019/bootcamp-resources" "9bddc44f1021ed298d200c62ac1f41560bb01fef"
 github "Quick/Nimble" "v8.0.4"
 github "Quick/Quick" "v2.2.0"
