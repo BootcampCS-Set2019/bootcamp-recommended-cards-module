@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RecomendedCardsInteractorProtocol {
+protocol RecommendedCardsInteractorProtocol {
     func fetchSets()
     func fetchNextSetCards()
 }

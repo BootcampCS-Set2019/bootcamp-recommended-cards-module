@@ -12,8 +12,8 @@ import Entities
 
 class RecommendedCardsInteractor {
     private var dataProvider: MTGSDKDataProvider
-    private var cardsSets: [String: MagicCard] = [:]
-    private var sets: [MagicCardSet] = []
+    var cardsSets: [String: MagicCard] = [:]
+    var sets: [MagicCardSet] = []
 
     var presenter: RecommendedCardsPresenterProtocol?
 
@@ -22,7 +22,7 @@ class RecommendedCardsInteractor {
     }
 }
 
-extension RecommendedCardsInteractor: RecomendedCardsInteractorProtocol {
+extension RecommendedCardsInteractor: RecommendedCardsInteractorProtocol {
     func fetchSets() {
         self.dataProvider.getAllSets { [unowned self] (sets, error) in
             guard let sets = sets, error != nil else {

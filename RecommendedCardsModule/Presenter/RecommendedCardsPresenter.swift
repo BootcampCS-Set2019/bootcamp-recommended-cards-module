@@ -9,10 +9,11 @@
 import Entities
 
 class  RecommendedCardsPresenter {
-    var interactor: RecomendedCardsInteractorProtocol?
+    var interactor: RecommendedCardsInteractorProtocol?
 }
 
 extension RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
+    
     func fetchSets() {
         self.interactor?.fetchSets()
     }
