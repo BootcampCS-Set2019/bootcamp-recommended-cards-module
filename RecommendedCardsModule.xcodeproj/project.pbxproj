@@ -7,17 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BDAFF44A2346737E000256FF /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4482346737E000256FF /* Components.framework */; };
-		BDAFF44B2346737E000256FF /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4492346737E000256FF /* Resources.framework */; };
+		BDA31303234A2906005E2F84 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FB234A2905005E2F84 /* CardCollectionCell.swift */; };
+		BDA31304234A2906005E2F84 /* CardSetTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FC234A2905005E2F84 /* CardSetTableCell.swift */; };
+		BDA31305234A2906005E2F84 /* RecommendedCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FD234A2905005E2F84 /* RecommendedCardsView.swift */; };
+		BDA31306234A2906005E2F84 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FF234A2906005E2F84 /* AlignedCollectionViewFlowLayout.swift */; };
+		BDA31307234A2906005E2F84 /* DeckTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31301234A2906005E2F84 /* DeckTableHeader.swift */; };
+		BDA31308234A2906005E2F84 /* CardCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31302234A2906005E2F84 /* CardCollectionHeader.swift */; };
+		BDA31309234A2E21005E2F84 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4482346737E000256FF /* Components.framework */; };
+		BDA3130B234A2E2B005E2F84 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA3130A234A2E2B005E2F84 /* SnapKit.framework */; };
+		BDA3130C234A2E2F005E2F84 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4492346737E000256FF /* Resources.framework */; };
+		BDA3130E234A2E32005E2F84 /* Repositories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA3130D234A2E32005E2F84 /* Repositories.framework */; };
+		BDA31310234A2E3E005E2F84 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA3130F234A2E3E005E2F84 /* Kingfisher.framework */; };
+		BDA31316234A2FAC005E2F84 /* RecommendedCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31315234A2FAC005E2F84 /* RecommendedCardsViewController.swift */; };
+		BDA31319234A3285005E2F84 /* RecommendedCardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31318234A3285005E2F84 /* RecommendedCardsPresenter.swift */; };
+		BDA31328234B7974005E2F84 /* RecommendedViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31327234B7974005E2F84 /* RecommendedViewTypes.swift */; };
+		BDA3132A234B898D005E2F84 /* LoadingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31329234B898D005E2F84 /* LoadingHelper.swift */; };
+		BDA3132B234B8ABB005E2F84 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4492346737E000256FF /* Resources.framework */; };
+		BDA3132C234B8ABB005E2F84 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4492346737E000256FF /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BDA3133B234B9B79005E2F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA3133A234B9B79005E2F84 /* Assets.xcassets */; };
+		BDA3134C234D3191005E2F84 /* RecommendedCardsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3134B234D3191005E2F84 /* RecommendedCardsModuleBuilder.swift */; };
+		BDA31350234D3A38005E2F84 /* RecommendedCardsControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerTests.swift */; };
 		BDAFF48923468C60000256FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAFF48823468C60000256FF /* AppDelegate.swift */; };
-		BDAFF48B23468C60000256FF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAFF48A23468C60000256FF /* ViewController.swift */; };
-		BDAFF48E23468C60000256FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF48C23468C60000256FF /* Main.storyboard */; };
-		BDAFF49023468C61000256FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF48F23468C61000256FF /* Assets.xcassets */; };
-		BDAFF49323468C61000256FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDAFF49123468C61000256FF /* LaunchScreen.storyboard */; };
 		BDAFF49823468CCE000256FF /* RecommendedCardsModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */; };
 		BDAFF49923468CCE000256FF /* RecommendedCardsModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BDB7EA3E234640FD002FB416 /* RecommendedCardsModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */; };
-		BDB7EA43234640FD002FB416 /* RecommendedCardsModuleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7EA42234640FD002FB416 /* RecommendedCardsModuleTests.swift */; };
 		BDB7EA45234640FE002FB416 /* RecommendedCardsModule.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB7EA37234640FD002FB416 /* RecommendedCardsModule.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
@@ -45,6 +58,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BDA3132C234B8ABB005E2F84 /* Resources.framework in Embed Frameworks */,
 				BDAFF49923468CCE000256FF /* RecommendedCardsModule.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -53,20 +67,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BDA312FB234A2905005E2F84 /* CardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
+		BDA312FC234A2905005E2F84 /* CardSetTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSetTableCell.swift; sourceTree = "<group>"; };
+		BDA312FD234A2905005E2F84 /* RecommendedCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedCardsView.swift; sourceTree = "<group>"; };
+		BDA312FF234A2906005E2F84 /* AlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		BDA31301234A2906005E2F84 /* DeckTableHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeckTableHeader.swift; sourceTree = "<group>"; };
+		BDA31302234A2906005E2F84 /* CardCollectionHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionHeader.swift; sourceTree = "<group>"; };
+		BDA3130A234A2E2B005E2F84 /* SnapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SnapKit.framework; path = Carthage/Build/iOS/SnapKit.framework; sourceTree = "<group>"; };
+		BDA3130D234A2E32005E2F84 /* Repositories.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Repositories.framework; path = Carthage/Build/iOS/Repositories.framework; sourceTree = "<group>"; };
+		BDA3130F234A2E3E005E2F84 /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		BDA31311234A2ED4005E2F84 /* Entities.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Entities.framework; path = Carthage/Build/iOS/Entities.framework; sourceTree = "<group>"; };
+		BDA31315234A2FAC005E2F84 /* RecommendedCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsViewController.swift; sourceTree = "<group>"; };
+		BDA31318234A3285005E2F84 /* RecommendedCardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsPresenter.swift; sourceTree = "<group>"; };
+		BDA31327234B7974005E2F84 /* RecommendedViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewTypes.swift; sourceTree = "<group>"; };
+		BDA31329234B898D005E2F84 /* LoadingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHelper.swift; sourceTree = "<group>"; };
+		BDA3133A234B9B79005E2F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BDA3134B234D3191005E2F84 /* RecommendedCardsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsModuleBuilder.swift; sourceTree = "<group>"; };
+		BDA3134E234D3A38005E2F84 /* RecommendedCardsModuleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecommendedCardsModuleTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsControllerTests.swift; sourceTree = "<group>"; };
 		BDAFF4482346737E000256FF /* Components.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Components.framework; path = Carthage/Build/iOS/Components.framework; sourceTree = "<group>"; };
 		BDAFF4492346737E000256FF /* Resources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Resources.framework; path = Carthage/Build/iOS/Resources.framework; sourceTree = "<group>"; };
 		BDAFF48623468C60000256FF /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDAFF48823468C60000256FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDAFF48A23468C60000256FF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BDAFF48D23468C60000256FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		BDAFF48F23468C61000256FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BDAFF49223468C61000256FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDAFF49423468C61000256FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RecommendedCardsModule.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB7EA37234640FD002FB416 /* RecommendedCardsModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecommendedCardsModule.h; sourceTree = "<group>"; };
 		BDB7EA38234640FD002FB416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDB7EA3D234640FD002FB416 /* RecommendedCardsModuleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecommendedCardsModuleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDB7EA42234640FD002FB416 /* RecommendedCardsModuleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsModuleTests.swift; sourceTree = "<group>"; };
 		BDB7EA44234640FE002FB416 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA3132B234B8ABB005E2F84 /* Resources.framework in Frameworks */,
 				BDAFF49823468CCE000256FF /* RecommendedCardsModule.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,8 +111,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDAFF44A2346737E000256FF /* Components.framework in Frameworks */,
-				BDAFF44B2346737E000256FF /* Resources.framework in Frameworks */,
+				BDA3130C234A2E2F005E2F84 /* Resources.framework in Frameworks */,
+				BDA31309234A2E21005E2F84 /* Components.framework in Frameworks */,
+				BDA3130E234A2E32005E2F84 /* Repositories.framework in Frameworks */,
+				BDA31310234A2E3E005E2F84 /* Kingfisher.framework in Frameworks */,
+				BDA3130B234A2E2B005E2F84 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,9 +130,86 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BDA312FA234A2905005E2F84 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BDA312FB234A2905005E2F84 /* CardCollectionCell.swift */,
+				BDA312FC234A2905005E2F84 /* CardSetTableCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		BDA312FE234A2906005E2F84 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				BDA312FF234A2906005E2F84 /* AlignedCollectionViewFlowLayout.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BDA31300234A2906005E2F84 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				BDA31301234A2906005E2F84 /* DeckTableHeader.swift */,
+				BDA31302234A2906005E2F84 /* CardCollectionHeader.swift */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		BDA31313234A2F8C005E2F84 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BDA312FA234A2905005E2F84 /* Cells */,
+				BDA31300234A2906005E2F84 /* Headers */,
+				BDA312FD234A2905005E2F84 /* RecommendedCardsView.swift */,
+				BDA312FE234A2906005E2F84 /* Utils */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BDA31317234A326D005E2F84 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				BDA31318234A3285005E2F84 /* RecommendedCardsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		BDA31326234B7964005E2F84 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BDA31327234B7974005E2F84 /* RecommendedViewTypes.swift */,
+				BDA31329234B898D005E2F84 /* LoadingHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BDA31347234CF382005E2F84 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BDA31315234A2FAC005E2F84 /* RecommendedCardsViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BDA3134D234D3196005E2F84 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				BDA31326234B7964005E2F84 /* Helpers */,
+				BDA31347234CF382005E2F84 /* Controller */,
+				BDA31317234A326D005E2F84 /* Presenter */,
+				BDA31313234A2F8C005E2F84 /* View */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
 		BDAFF4472346737D000256FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDA31311234A2ED4005E2F84 /* Entities.framework */,
+				BDA3130F234A2E3E005E2F84 /* Kingfisher.framework */,
+				BDA3130D234A2E32005E2F84 /* Repositories.framework */,
+				BDA3130A234A2E2B005E2F84 /* SnapKit.framework */,
 				BDAFF4482346737E000256FF /* Components.framework */,
 				BDAFF4492346737E000256FF /* Resources.framework */,
 			);
@@ -112,10 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				BDAFF48823468C60000256FF /* AppDelegate.swift */,
-				BDAFF48A23468C60000256FF /* ViewController.swift */,
-				BDAFF48C23468C60000256FF /* Main.storyboard */,
-				BDAFF48F23468C61000256FF /* Assets.xcassets */,
-				BDAFF49123468C61000256FF /* LaunchScreen.storyboard */,
+				BDA3133A234B9B79005E2F84 /* Assets.xcassets */,
 				BDAFF49423468C61000256FF /* Info.plist */,
 			);
 			path = Sample;
@@ -145,8 +250,10 @@
 		BDB7EA36234640FD002FB416 /* RecommendedCardsModule */ = {
 			isa = PBXGroup;
 			children = (
+				BDA3134D234D3196005E2F84 /* Root */,
 				BDB7EA37234640FD002FB416 /* RecommendedCardsModule.h */,
 				BDB7EA38234640FD002FB416 /* Info.plist */,
+				BDA3134B234D3191005E2F84 /* RecommendedCardsModuleBuilder.swift */,
 			);
 			path = RecommendedCardsModule;
 			sourceTree = "<group>";
@@ -154,8 +261,9 @@
 		BDB7EA41234640FD002FB416 /* RecommendedCardsModuleTests */ = {
 			isa = PBXGroup;
 			children = (
-				BDB7EA42234640FD002FB416 /* RecommendedCardsModuleTests.swift */,
 				BDB7EA44234640FE002FB416 /* Info.plist */,
+				BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerTests.swift */,
+				BDA3134E234D3A38005E2F84 /* RecommendedCardsModuleTests-Bridging-Header.h */,
 			);
 			path = RecommendedCardsModuleTests;
 			sourceTree = "<group>";
@@ -252,6 +360,7 @@
 					};
 					BDB7EA3C234640FD002FB416 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 				};
 			};
@@ -280,9 +389,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDAFF49323468C61000256FF /* LaunchScreen.storyboard in Resources */,
-				BDAFF49023468C61000256FF /* Assets.xcassets in Resources */,
-				BDAFF48E23468C60000256FF /* Main.storyboard in Resources */,
+				BDA3133B234B9B79005E2F84 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,12 +437,26 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Components.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Resources.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Repositories.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Entities.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxRelay.framework",
 			);
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Components.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Resources.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Repositories.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Entities.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxRelay.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -384,7 +505,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDAFF48B23468C60000256FF /* ViewController.swift in Sources */,
 				BDAFF48923468C60000256FF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,6 +513,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA3132A234B898D005E2F84 /* LoadingHelper.swift in Sources */,
+				BDA31307234A2906005E2F84 /* DeckTableHeader.swift in Sources */,
+				BDA31303234A2906005E2F84 /* CardCollectionCell.swift in Sources */,
+				BDA31306234A2906005E2F84 /* AlignedCollectionViewFlowLayout.swift in Sources */,
+				BDA3134C234D3191005E2F84 /* RecommendedCardsModuleBuilder.swift in Sources */,
+				BDA31305234A2906005E2F84 /* RecommendedCardsView.swift in Sources */,
+				BDA31319234A3285005E2F84 /* RecommendedCardsPresenter.swift in Sources */,
+				BDA31308234A2906005E2F84 /* CardCollectionHeader.swift in Sources */,
+				BDA31316234A2FAC005E2F84 /* RecommendedCardsViewController.swift in Sources */,
+				BDA31328234B7974005E2F84 /* RecommendedViewTypes.swift in Sources */,
+				BDA31304234A2906005E2F84 /* CardSetTableCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +531,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDB7EA43234640FD002FB416 /* RecommendedCardsModuleTests.swift in Sources */,
+				BDA31350234D3A38005E2F84 /* RecommendedCardsControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,32 +550,19 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXVariantGroup section */
-		BDAFF48C23468C60000256FF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDAFF48D23468C60000256FF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BDAFF49123468C61000256FF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDAFF49223468C61000256FF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		BDAFF49623468C61000256FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,9 +578,15 @@
 		BDAFF49723468C61000256FF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Sample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -661,6 +785,8 @@
 		BDB7EA4C234640FE002FB416 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
@@ -672,6 +798,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.bootcamp.set2019.RecommendedCardsModuleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecommendedCardsModuleTests/RecommendedCardsModuleTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -680,6 +808,8 @@
 		BDB7EA4D234640FE002FB416 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = DVMDCJRNKS;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
@@ -691,6 +821,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.bootcamp.set2019.RecommendedCardsModuleTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RecommendedCardsModuleTests/RecommendedCardsModuleTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
