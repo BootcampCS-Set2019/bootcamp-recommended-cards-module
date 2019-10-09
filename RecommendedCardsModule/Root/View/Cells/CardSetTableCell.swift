@@ -8,6 +8,7 @@
 
 import Entities
 import Components
+import Resources
 
 protocol CardSetTableCellDelegate: class {
     func didTapCard(card: Card)
@@ -43,6 +44,12 @@ class CardSetTableCell: UITableViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
 
+        collectionView.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .collectionView,
+                                      additionalName: nil,
+                                      module: .recommendedCards,
+                                      number: nil)
+            .constructedName
         return collectionView
     }()
 
@@ -57,7 +64,17 @@ class CardSetTableCell: UITableViewCell {
     }
 
     func applyViewModel() {
+        guard let viewModelAux = viewModel else {
+            return
+        }
+
         self.collectionView.reloadData()
+        self.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .tableViewCell,
+                                      additionalName: nil,
+                                      module: .recommendedCards,
+                                      number: viewModelAux.set.code)
+            .constructedName
     }
 
     override func systemLayoutSizeFitting(_ targetSize: CGSize,
@@ -105,8 +122,8 @@ extension CardSetTableCell: UICollectionViewDataSource {
             fatalError()
         }
 
-        if let cardUrl = viewModel?.types[indexPath.section].cards[indexPath.row].imageUrl {
-            cell.viewModel = cardUrl
+        if let card = viewModel?.types[indexPath.section].cards[indexPath.row] {
+            cell.viewModel = card
         }
 
         return cell

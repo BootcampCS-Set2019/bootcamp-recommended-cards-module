@@ -35,6 +35,12 @@ class RecommendedCardsView: UIView {
         let searchBar = MagicDesignSystem.SearchBar.searchCardsHorizontalLarge
             .uiSearchBar(placeholder: "Search for cards")
         searchBar.delegate = self
+        searchBar.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .searchBar,
+                                      additionalName: nil,
+                                      module: .recommendedCards,
+                                      number: nil)
+            .constructedName
         return searchBar
     }()
 
@@ -48,6 +54,12 @@ class RecommendedCardsView: UIView {
         tableView.register(DeckTableHeader.self,
                            forHeaderFooterViewReuseIdentifier: DeckTableHeader.identifier)
         tableView.backgroundColor = .clear
+        tableView.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .tableView,
+                                      additionalName: nil,
+                                      module: .recommendedCards,
+                                      number: nil)
+            .constructedName
         return tableView
     }()
 
@@ -55,6 +67,12 @@ class RecommendedCardsView: UIView {
         let imageView = UIImageView()
         imageView.contentMode =  .scaleAspectFill
         imageView.clipsToBounds = true
+        imageView.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: ComponentTypes.imageView,
+                                      additionalName: "Background",
+                                      module: ModuleNames.recommendedCards,
+                                      number: nil)
+            .constructedName
         return imageView
     }()
 
