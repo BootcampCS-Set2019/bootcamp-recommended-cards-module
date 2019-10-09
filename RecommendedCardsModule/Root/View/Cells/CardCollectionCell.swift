@@ -9,11 +9,12 @@
 import Components
 import Kingfisher
 import Resources
+import Entities
 
 class CardCollectionCell: UICollectionViewCell {
     static var identifier: String = "DeckTableCell"
 
-    public var viewModel: String? {
+    public var viewModel: Card? {
         didSet {
             applyViewModel()
         }
@@ -36,9 +37,21 @@ class CardCollectionCell: UICollectionViewCell {
     }
 
     func applyViewModel() {
-        let url = URL(string: viewModel!)
+        guard let viewModelAux = viewModel else {
+            return
+        }
+        guard let imageUrl = viewModelAux.imageUrl else {
+            return
+        }
+        let url = URL(string: imageUrl)
         self.imageView.kf.setImage(with: url,
                                    placeholder: MagicDesignSystem.Assets.defaultCardArtboard)
+        self.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .collectionViewCell,
+                                      additionalName: nil,
+                                      module: .recommendedCards,
+                                      number: viewModelAux.id)
+            .constructedName
     }
 }
 

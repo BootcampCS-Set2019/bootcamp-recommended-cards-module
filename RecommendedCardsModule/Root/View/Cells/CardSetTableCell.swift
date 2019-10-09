@@ -8,6 +8,7 @@
 
 import Entities
 import Components
+import Resources
 
 protocol CardSetTableCellDelegate: class {
     func didTapCard(card: Card)
@@ -25,11 +26,17 @@ class CardSetTableCell: UITableViewCell {
     }
 
     private(set) lazy var collectionView: UICollectionView = {
+        let screenSize = UIScreen.main.bounds.size
+        let cardSpacing: CGFloat = 17
+        let cardsInLine: CGFloat = 3
+        let cardWidth = (screenSize.width / cardsInLine) - (cardSpacing + cardsInLine) - 2
+        let cardHeight = 118 * cardWidth / 85
+
         let layout = AlignedCollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 85, height: 118)
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 17
-        layout.sectionInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
+        layout.itemSize = CGSize(width: cardWidth, height: cardHeight)
+        layout.minimumInteritemSpacing = 17
+        layout.minimumLineSpacing = 16
+        layout.sectionInset = UIEdgeInsets.init(top: 0, left: 16, bottom: 0, right: 16)
         layout.headerReferenceSize = CGSize(width: 0, height: 35)
         layout.horizontalAlignment = HorizontalAlignment.left
 
@@ -43,6 +50,12 @@ class CardSetTableCell: UITableViewCell {
         collectionView.dataSource = self
         collectionView.delegate = self
 
+        collectionView.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .collectionView,
+                                      additionalName: nil,
+                                      module: .recommendedCards,
+                                      number: nil)
+            .constructedName
         return collectionView
     }()
 
@@ -57,7 +70,17 @@ class CardSetTableCell: UITableViewCell {
     }
 
     func applyViewModel() {
+        guard let viewModelAux = viewModel else {
+            return
+        }
+
         self.collectionView.reloadData()
+        self.accessibilityIdentifier = MagicDesignSystem
+            .AccessibilityIdentifiers(componentType: .tableViewCell,
+                                      additionalName: nil,
+                                      module: .recommendedCards,
+                                      number: viewModelAux.set.code)
+            .constructedName
     }
 
     override func systemLayoutSizeFitting(_ targetSize: CGSize,
@@ -105,8 +128,8 @@ extension CardSetTableCell: UICollectionViewDataSource {
             fatalError()
         }
 
-        if let cardUrl = viewModel?.types[indexPath.section].cards[indexPath.row].imageUrl {
-            cell.viewModel = cardUrl
+        if let card = viewModel?.types[indexPath.section].cards[indexPath.row] {
+            cell.viewModel = card
         }
 
         return cell
