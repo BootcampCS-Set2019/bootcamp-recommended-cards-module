@@ -55,6 +55,7 @@ extension CardCollectionCell: ViewCodable {
 
     func configureAdditional() {
         self.backgroundColor = .clear
+        self.imageView.image = MagicDesignSystem.Assets.defaultCardArtboard
         self.imageView.backgroundColor = .clear
         self.imageView.layer.cornerRadius = 8
     }
