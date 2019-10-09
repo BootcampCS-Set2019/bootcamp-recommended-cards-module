@@ -26,11 +26,17 @@ class CardSetTableCell: UITableViewCell {
     }
 
     private(set) lazy var collectionView: UICollectionView = {
+        let screenSize = UIScreen.main.bounds.size
+        let cardSpacing: CGFloat = 17
+        let cardsInLine: CGFloat = 3
+        let cardWidth = (screenSize.width / cardsInLine) - (cardSpacing + cardsInLine) - 2
+        let cardHeight = 118 * cardWidth / 85
+
         let layout = AlignedCollectionViewFlowLayout()
-        layout.itemSize = CGSize(width: 85, height: 118)
-        layout.minimumInteritemSpacing = 10
-        layout.minimumLineSpacing = 17
-        layout.sectionInset = UIEdgeInsets.init(top: 0, left: 20, bottom: 0, right: 20)
+        layout.itemSize = CGSize(width: cardWidth, height: cardHeight)
+        layout.minimumInteritemSpacing = 17
+        layout.minimumLineSpacing = 16
+        layout.sectionInset = UIEdgeInsets.init(top: 0, left: 16, bottom: 0, right: 16)
         layout.headerReferenceSize = CGSize(width: 0, height: 35)
         layout.horizontalAlignment = HorizontalAlignment.left
 
