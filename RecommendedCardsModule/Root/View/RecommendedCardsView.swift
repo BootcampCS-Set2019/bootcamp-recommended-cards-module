@@ -31,6 +31,13 @@ class RecommendedCardsView: UIView {
 
     public weak var delegate: RecommendedCardsViewDelegate?
 
+    private(set) lazy var cardsSearchBar: UISearchBar = {
+        let searchBar = MagicDesignSystem.SearchBar.searchCardsHorizontalLarge
+            .uiSearchBar(placeholder: "Search for cards")
+        searchBar.delegate = self
+        return searchBar
+    }()
+
     private(set) lazy var decksTableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
         tableView.separatorStyle = .none
@@ -69,6 +76,7 @@ class RecommendedCardsView: UIView {
 extension RecommendedCardsView: ViewCodable {
     func buildHierarchy() {
         self.addSubview(backgroundView)
+        self.addSubview(cardsSearchBar)
         self.addSubview(decksTableView)
 
         self.sendSubviewToBack(backgroundView)
@@ -80,11 +88,15 @@ extension RecommendedCardsView: ViewCodable {
             maker.center.equalToSuperview()
         }
 
+        self.cardsSearchBar.snp.makeConstraints { (maker) in
+            maker.top.equalTo(self.snp.top).offset(30)
+            maker.left.equalTo(self.snp.left).offset(15)
+            maker.right.equalTo(self.snp.right).offset(-15)
+        }
+
         self.decksTableView.snp.makeConstraints { (maker) in
-            maker.top.equalTo(self.snp.top)
-            maker.left.equalTo(self.snp.left)
-            maker.right.equalTo(self.snp.right)
-            maker.bottom.equalTo(self.snp.bottom)
+            maker.top.equalTo(cardsSearchBar.snp.bottom).offset(20)
+            maker.left.right.bottom.equalToSuperview()
         }
     }
 
@@ -142,5 +154,22 @@ extension RecommendedCardsView: UITableViewDelegate {
 extension RecommendedCardsView: CardSetTableCellDelegate {
     func didTapCard(card: Card) {
         delegate?.didTap(card: card)
+    }
+}
+
+extension RecommendedCardsView: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        searchBar.setShowsCancelButton(true, animated: true)
+    }
+
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.text = ""
+        searchBar.setShowsCancelButton(false, animated: true)
+        searchBar.resignFirstResponder()
+    }
+
+    func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
+        searchBar.setShowsCancelButton(false, animated: true)
+        return true
     }
 }
