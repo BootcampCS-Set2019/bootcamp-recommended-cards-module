@@ -9,8 +9,10 @@
 import Foundation
 
 public class RecommendedCardsModuleBuilder {
-    public static func buildRoot() -> UIViewController {
+    public static func buildRoot(delegate: RecommendedCardsDelegate) -> UIViewController {
         let presenter = RecommendedCardsPresenter()
-        return RecommendedCardsViewController(presenter: presenter)
+        let controller = RecommendedCardsViewController(presenter: presenter)
+        controller.delegate = delegate
+        return controller
     }
 }

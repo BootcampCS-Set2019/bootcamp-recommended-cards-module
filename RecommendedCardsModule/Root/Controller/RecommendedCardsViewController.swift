@@ -5,11 +5,9 @@
 //  Created by matheus.filipe.bispo on 06/10/19.
 //  Copyright © 2019 BootcampCS-Set2019. All rights reserved.
 //
-import RxSwift
-import RxCocoa
 import Entities
 
-protocol RecommendedCardsDelegate: class {
+public protocol RecommendedCardsDelegate: class {
     func didTapCard(card: Card)
 }
 
