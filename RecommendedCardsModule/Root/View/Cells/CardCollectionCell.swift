@@ -37,7 +37,8 @@ class CardCollectionCell: UICollectionViewCell {
 
     func applyViewModel() {
         let url = URL(string: viewModel!)
-        self.imageView.kf.setImage(with: url)
+        self.imageView.kf.setImage(with: url,
+                                   placeholder: MagicDesignSystem.Assets.defaultCardArtboard)
     }
 }
 
@@ -54,7 +55,6 @@ extension CardCollectionCell: ViewCodable {
 
     func configureAdditional() {
         self.backgroundColor = .clear
-        self.imageView.image = MagicDesignSystem.Assets.defaultCardArtboard
         self.imageView.backgroundColor = .clear
         self.imageView.layer.cornerRadius = 8
     }
