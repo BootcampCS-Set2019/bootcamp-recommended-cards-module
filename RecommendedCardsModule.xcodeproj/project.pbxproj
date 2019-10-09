@@ -13,11 +13,6 @@
 		BDA31306234A2906005E2F84 /* AlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FF234A2906005E2F84 /* AlignedCollectionViewFlowLayout.swift */; };
 		BDA31307234A2906005E2F84 /* DeckTableHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31301234A2906005E2F84 /* DeckTableHeader.swift */; };
 		BDA31308234A2906005E2F84 /* CardCollectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31302234A2906005E2F84 /* CardCollectionHeader.swift */; };
-		BDA31309234A2E21005E2F84 /* Components.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4482346737E000256FF /* Components.framework */; };
-		BDA3130B234A2E2B005E2F84 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA3130A234A2E2B005E2F84 /* SnapKit.framework */; };
-		BDA3130C234A2E2F005E2F84 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4492346737E000256FF /* Resources.framework */; };
-		BDA3130E234A2E32005E2F84 /* Repositories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA3130D234A2E32005E2F84 /* Repositories.framework */; };
-		BDA31310234A2E3E005E2F84 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA3130F234A2E3E005E2F84 /* Kingfisher.framework */; };
 		BDA31316234A2FAC005E2F84 /* RecommendedCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31315234A2FAC005E2F84 /* RecommendedCardsViewController.swift */; };
 		BDA31319234A3285005E2F84 /* RecommendedCardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31318234A3285005E2F84 /* RecommendedCardsPresenter.swift */; };
 		BDA31328234B7974005E2F84 /* RecommendedViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31327234B7974005E2F84 /* RecommendedViewTypes.swift */; };
@@ -109,11 +104,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDA3130C234A2E2F005E2F84 /* Resources.framework in Frameworks */,
-				BDA31309234A2E21005E2F84 /* Components.framework in Frameworks */,
-				BDA3130E234A2E32005E2F84 /* Repositories.framework in Frameworks */,
-				BDA31310234A2E3E005E2F84 /* Kingfisher.framework in Frameworks */,
-				BDA3130B234A2E2B005E2F84 /* SnapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
