@@ -21,7 +21,7 @@ enum RecommendedCardsPresenterError: Error {
 
 class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
 
-    private var provider = DataProvider(api: API())
+    private var provider = DataProvider(api: API(session: URLSession.shared))
     private var semaphore = DispatchSemaphore(value: 0)
     private var sets: [CardSet] = []
     private var types: [String] = []
