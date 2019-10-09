@@ -7,7 +7,7 @@
 //
 import Entities
 
-protocol RecommendedCardsDelegate: class {
+public protocol RecommendedCardsDelegate: class {
     func didTapCard(card: Card)
 }
 
