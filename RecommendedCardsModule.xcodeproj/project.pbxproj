@@ -21,7 +21,6 @@
 		BDA31316234A2FAC005E2F84 /* RecommendedCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31315234A2FAC005E2F84 /* RecommendedCardsViewController.swift */; };
 		BDA31319234A3285005E2F84 /* RecommendedCardsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31318234A3285005E2F84 /* RecommendedCardsPresenter.swift */; };
 		BDA31328234B7974005E2F84 /* RecommendedViewTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31327234B7974005E2F84 /* RecommendedViewTypes.swift */; };
-		BDA3132A234B898D005E2F84 /* LoadingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA31329234B898D005E2F84 /* LoadingHelper.swift */; };
 		BDA3132B234B8ABB005E2F84 /* Resources.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4492346737E000256FF /* Resources.framework */; };
 		BDA3132C234B8ABB005E2F84 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4492346737E000256FF /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BDA3133B234B9B79005E2F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA3133A234B9B79005E2F84 /* Assets.xcassets */; };
@@ -80,7 +79,6 @@
 		BDA31315234A2FAC005E2F84 /* RecommendedCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsViewController.swift; sourceTree = "<group>"; };
 		BDA31318234A3285005E2F84 /* RecommendedCardsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsPresenter.swift; sourceTree = "<group>"; };
 		BDA31327234B7974005E2F84 /* RecommendedViewTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedViewTypes.swift; sourceTree = "<group>"; };
-		BDA31329234B898D005E2F84 /* LoadingHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingHelper.swift; sourceTree = "<group>"; };
 		BDA3133A234B9B79005E2F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDA3134B234D3191005E2F84 /* RecommendedCardsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsModuleBuilder.swift; sourceTree = "<group>"; };
 		BDA3134E234D3A38005E2F84 /* RecommendedCardsModuleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecommendedCardsModuleTests-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -179,7 +177,6 @@
 			isa = PBXGroup;
 			children = (
 				BDA31327234B7974005E2F84 /* RecommendedViewTypes.swift */,
-				BDA31329234B898D005E2F84 /* LoadingHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -513,7 +510,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDA3132A234B898D005E2F84 /* LoadingHelper.swift in Sources */,
 				BDA31307234A2906005E2F84 /* DeckTableHeader.swift in Sources */,
 				BDA31303234A2906005E2F84 /* CardCollectionCell.swift in Sources */,
 				BDA31306234A2906005E2F84 /* AlignedCollectionViewFlowLayout.swift in Sources */,
