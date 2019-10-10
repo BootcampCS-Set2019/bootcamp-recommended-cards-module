@@ -52,6 +52,8 @@ class CardCollectionCell: UICollectionViewCell {
                                       module: .recommendedCards,
                                       number: viewModelAux.id)
             .constructedName
+
+        self.isAccessibilityElement = true
     }
 }
 
