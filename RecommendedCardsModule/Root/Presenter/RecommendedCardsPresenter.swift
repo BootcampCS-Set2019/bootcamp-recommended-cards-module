@@ -22,7 +22,7 @@ enum RecommendedCardsPresenterError: Error {
 
 class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
 
-    private var provider = DataProvider(api: API(session: URLSession.shared))
+    private var provider: DataProviderProtocol
     private var semaphore = DispatchSemaphore(value: 0)
     private var sets: [CardSet] = []
     private var types: [String] = []
@@ -30,6 +30,10 @@ class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
     private var viewModel = RecommendedCardsViewModel(sets: [])
     private var lastLoadedSetIndex = 0
     private var isSetsAndTypesLoaded = false
+
+    init(provider: DataProviderProtocol) {
+        self.provider = provider
+    }
 
     func loadSetsAndTypes() -> Future<Void, APIError> {
         return Future.on(.global(qos: .userInitiated)) { [unowned self] future in
@@ -79,7 +83,7 @@ class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
             var helper = CardSetHelper(set: set, types: [])
 
             for type in self.types {
-                let queue = DispatchQueue(label: "\(type) :: Thread")
+                let queue = DispatchQueue(label: "com.magic.\(type)", attributes: .concurrent)
                 queue.async {
                     var typeAux = CardTypeHelper(name: type, cards: [])
                     var pageCount = 0
@@ -88,7 +92,7 @@ class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
                         self.provider
                             .getCards(of: type, in: helper.set, at: pageCount)
                             .then({(cardsResult) in
-
+                                print(" :: \(type) loaded")
                                 typeAux.cards.append(contentsOf: cardsResult.cards)
 
                                 if cardsResult.cards.count < 100 {
@@ -123,6 +127,7 @@ class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
                 return type1.name < type2.name
             })
 
+            print(" :: All was loaded")
             future.resolve(value: helper)
         }
     }

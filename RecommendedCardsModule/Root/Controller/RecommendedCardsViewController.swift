@@ -11,7 +11,7 @@ public protocol RecommendedCardsDelegate: class {
     func didTapCard(card: Card)
 }
 
-class RecommendedCardsViewController: UIViewController {
+public class RecommendedCardsViewController: UIViewController {
 
     var presenter: RecommendedCardsPresenterProtocol
     let mainView = RecommendedCardsView()

@@ -6,13 +6,13 @@
 //  Copyright © 2019 BootcampCS-Set2019. All rights reserved.
 //
 
-import Foundation
+import Repositories
+import Entities
 
 public class RecommendedCardsModuleBuilder {
-    public static func buildRoot(delegate: RecommendedCardsDelegate) -> UIViewController {
-        let presenter = RecommendedCardsPresenter()
+    public static func buildRoot(provider: DataProvider) -> RecommendedCardsViewController {
+        let presenter = RecommendedCardsPresenter(provider: provider)
         let controller = RecommendedCardsViewController(presenter: presenter)
-        controller.delegate = delegate
         return controller
     }
 }

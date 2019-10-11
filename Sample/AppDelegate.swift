@@ -8,6 +8,7 @@
 
 import RecommendedCardsModule
 import Entities
+import Repositories
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let window = UIWindow(frame: UIScreen.main.bounds)
 
-        window.rootViewController = RecommendedCardsModuleBuilder.buildRoot(delegate: self)
+        let provider = DataProvider(api: API(session: URLSession.shared))
+
+        let viewController = RecommendedCardsModuleBuilder.buildRoot(provider: provider)
+        viewController.delegate = self
+        window.rootViewController = viewController
 
         self.window = window
         window.makeKeyAndVisible()
@@ -37,5 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: RecommendedCardsDelegate {
-    func didTapCard(card: Card) {}
+    func didTapCard(card: Card) {
+
+    }
 }

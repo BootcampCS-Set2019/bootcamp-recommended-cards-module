@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD67FFDB234F9EDE003B8D5A /* Repositories.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA3130D234A2E32005E2F84 /* Repositories.framework */; };
+		BD67FFDC234F9EDE003B8D5A /* Repositories.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDA3130D234A2E32005E2F84 /* Repositories.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BD67FFDD234F9EF3003B8D5A /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA31311234A2ED4005E2F84 /* Entities.framework */; };
+		BD67FFDE234F9EF3003B8D5A /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDA31311234A2ED4005E2F84 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BDA31303234A2906005E2F84 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FB234A2905005E2F84 /* CardCollectionCell.swift */; };
 		BDA31304234A2906005E2F84 /* CardSetTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FC234A2905005E2F84 /* CardSetTableCell.swift */; };
 		BDA31305234A2906005E2F84 /* RecommendedCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FD234A2905005E2F84 /* RecommendedCardsView.swift */; };
@@ -52,8 +56,10 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				BD67FFDC234F9EDE003B8D5A /* Repositories.framework in Embed Frameworks */,
 				BDA3132C234B8ABB005E2F84 /* Resources.framework in Embed Frameworks */,
 				BDAFF49923468CCE000256FF /* RecommendedCardsModule.framework in Embed Frameworks */,
+				BD67FFDE234F9EF3003B8D5A /* Entities.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,8 +101,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD67FFDB234F9EDE003B8D5A /* Repositories.framework in Frameworks */,
 				BDA3132B234B8ABB005E2F84 /* Resources.framework in Frameworks */,
 				BDAFF49823468CCE000256FF /* RecommendedCardsModule.framework in Frameworks */,
+				BD67FFDD234F9EF3003B8D5A /* Entities.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,7 +434,6 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Resources.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Repositories.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/SnapKit.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/Kingfisher.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Entities.framework",
 			);
 			outputFileListPaths = (
@@ -436,7 +443,6 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Resources.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Repositories.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
-				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Kingfisher.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Entities.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
