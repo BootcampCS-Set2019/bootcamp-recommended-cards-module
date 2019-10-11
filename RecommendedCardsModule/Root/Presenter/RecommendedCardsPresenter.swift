@@ -17,6 +17,7 @@ protocol RecommendedCardsPresenterProtocol {
 enum RecommendedCardsPresenterError: Error {
     case setsAndTypesNotLoaded
     case notExistMoreSets
+    case cardsNotLoaded
 }
 
 class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
@@ -44,10 +45,16 @@ class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
                 })
 
                 self.semaphore.signal()
+            }.catch { (error) in
+                future.reject(error: error)
+                self.semaphore.signal()
             }
 
             self.provider.getAllSets().then { (result) in
                 self.sets = result.sets
+                self.semaphore.signal()
+            }.catch { (error) in
+                future.reject(error: error)
                 self.semaphore.signal()
             }
 
@@ -96,7 +103,10 @@ class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
 
                                 pageCount += 1
                                 queueSemaphore.signal()
-                        })
+                            }).catch({ (error) in
+                                queueSemaphore.signal()
+                                future.reject(error: .cardsNotLoaded)
+                            })
                         queueSemaphore.wait()
                     }
 

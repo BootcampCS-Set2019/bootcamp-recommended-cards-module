@@ -35,18 +35,34 @@ public class RecommendedCardsViewController: UIViewController {
 
     public override func viewDidLoad() {
         super.viewDidLoad()
+        self.bringData()
+    }
 
+    private func bringData() {
+        mainView.loadingIndicator.startAnimating()
         DispatchQueue.main.async {
-            self.presenter.loadSetsAndTypes().then({ _ in
-                self.semaphore.signal()
-            })
+            self.presenter.loadSetsAndTypes().then(on: .main) { _ in
 
-            self.semaphore.wait()
-
-            self.presenter.loadAllCardsOfNextSet().then(on: .main) { (helper) in
-                self.apply(viewModel: RecommendedCardsViewModel(sets: [helper]))
+                self.presenter.loadAllCardsOfNextSet().then(on: .main) { (helper) in
+                    self.mainView.loadingIndicator.stopAnimating()
+                    self.apply(viewModel: RecommendedCardsViewModel(sets: [helper]))
+                }
+            }.catch(on: .main) { (error) in
+                self.mainView.loadingIndicator.stopAnimating()
+                self.mainView.errorState.errorView.isUserInteractionEnabled = true
+                self.mainView.errorState.errorView.isHidden = false
+                self.mainView.errorState.messageLabel.text = error.localizedDescription
+                if let button = self.mainView.errorState.buttonRetry {
+                    button.addTarget(self, action: #selector(self.retryButtonAction), for: .touchUpInside)
+                }
             }
         }
+    }
+
+    @objc func retryButtonAction(sender: UIButton!) {
+        self.bringData()
+        self.mainView.errorState.errorView.isUserInteractionEnabled = false
+        self.mainView.errorState.errorView.isHidden = true
     }
 
     func apply(viewModel: RecommendedCardsViewModel) {
@@ -60,8 +76,8 @@ extension RecommendedCardsViewController: RecommendedCardsViewDelegate {
     }
 
     public func didScroll(_ scrollView: UIScrollView) {
-//        if scrollView.contentOffset.y > scrollView.contentSize.height/3 {
-//            interactor.loadAllCardsOfNextSet()
-//        }
+        //        if scrollView.contentOffset.y > scrollView.contentSize.height/3 {
+        //            interactor.loadAllCardsOfNextSet()
+        //        }
     }
 }
