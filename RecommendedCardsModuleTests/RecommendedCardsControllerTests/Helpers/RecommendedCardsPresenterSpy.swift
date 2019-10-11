@@ -6,6 +6,7 @@
 //  Copyright © 2019 BootcampCS-Set2019. All rights reserved.
 //
 
+import Entities
 @testable import RecommendedCardsModule
 import Repositories
 
@@ -13,10 +14,11 @@ class RecommendedCardsPresenterMock: RecommendedCardsPresenterProtocol {
     var invokedLoadSetsAndTypes = false
     var invokedLoadSetsAndTypesCount = 0
     var stubbedLoadSetsAndTypesResult: Future<Void, APIError>!
+
     func loadSetsAndTypes() -> Future<Void, APIError> {
         invokedLoadSetsAndTypes = true
         invokedLoadSetsAndTypesCount += 1
-        return Future({_ in })
+        return stubbedLoadSetsAndTypesResult
     }
 
     var invokedLoadAllCardsOfNextSet = false
@@ -25,6 +27,6 @@ class RecommendedCardsPresenterMock: RecommendedCardsPresenterProtocol {
     func loadAllCardsOfNextSet() -> Future<CardSetHelper, RecommendedCardsPresenterError> {
         invokedLoadAllCardsOfNextSet = true
         invokedLoadAllCardsOfNextSetCount += 1
-        return Future({_ in })
+        return stubbedLoadAllCardsOfNextSetResult
     }
 }

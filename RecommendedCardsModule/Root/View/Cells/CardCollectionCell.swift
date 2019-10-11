@@ -46,7 +46,10 @@ class CardCollectionCell: UICollectionViewCell {
             return
         }
 
-        let url = URL(string: imageUrl)!
+        guard let url = URL(string: imageUrl) else {
+            return
+        }
+
         self.imageView.downloaded(from: url)
 
         self.accessibilityIdentifier = MagicDesignSystem

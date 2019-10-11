@@ -12,6 +12,9 @@
 		BD67FFDD234F9EF3003B8D5A /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA31311234A2ED4005E2F84 /* Entities.framework */; };
 		BD67FFDE234F9EF3003B8D5A /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDA31311234A2ED4005E2F84 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BD67FFE72350D987003B8D5A /* RecommendedCardsPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67FFE62350D987003B8D5A /* RecommendedCardsPresenterSpy.swift */; };
+		BD67FFE92350F8CE003B8D5A /* RecommendedCardsDelegateSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67FFE82350F8CE003B8D5A /* RecommendedCardsDelegateSpy.swift */; };
+		BD67FFED2350FECB003B8D5A /* RecommendedCardsPresenterSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67FFEC2350FECB003B8D5A /* RecommendedCardsPresenterSpec.swift */; };
+		BD67FFEF2350FF44003B8D5A /* DataProviderSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67FFEE2350FF44003B8D5A /* DataProviderSpy.swift */; };
 		BDA31303234A2906005E2F84 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FB234A2905005E2F84 /* CardCollectionCell.swift */; };
 		BDA31304234A2906005E2F84 /* CardSetTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FC234A2905005E2F84 /* CardSetTableCell.swift */; };
 		BDA31305234A2906005E2F84 /* RecommendedCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FD234A2905005E2F84 /* RecommendedCardsView.swift */; };
@@ -69,6 +72,9 @@
 
 /* Begin PBXFileReference section */
 		BD67FFE62350D987003B8D5A /* RecommendedCardsPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsPresenterSpy.swift; sourceTree = "<group>"; };
+		BD67FFE82350F8CE003B8D5A /* RecommendedCardsDelegateSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsDelegateSpy.swift; sourceTree = "<group>"; };
+		BD67FFEC2350FECB003B8D5A /* RecommendedCardsPresenterSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsPresenterSpec.swift; sourceTree = "<group>"; };
+		BD67FFEE2350FF44003B8D5A /* DataProviderSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProviderSpy.swift; sourceTree = "<group>"; };
 		BDA312FB234A2905005E2F84 /* CardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
 		BDA312FC234A2905005E2F84 /* CardSetTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSetTableCell.swift; sourceTree = "<group>"; };
 		BDA312FD234A2905005E2F84 /* RecommendedCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedCardsView.swift; sourceTree = "<group>"; };
@@ -128,13 +134,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BD67FFE52350D912003B8D5A /* RecommendedCardsModuleTests */ = {
+		BD67FFE52350D912003B8D5A /* RecommendedCardsControllerTests */ = {
 			isa = PBXGroup;
 			children = (
+				BD67FFEA2350FEA5003B8D5A /* Helpers */,
 				BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerSpec.swift */,
-				BD67FFE62350D987003B8D5A /* RecommendedCardsPresenterSpy.swift */,
 			);
-			path = RecommendedCardsModuleTests;
+			path = RecommendedCardsControllerTests;
+			sourceTree = "<group>";
+		};
+		BD67FFEA2350FEA5003B8D5A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BD67FFE62350D987003B8D5A /* RecommendedCardsPresenterSpy.swift */,
+				BD67FFE82350F8CE003B8D5A /* RecommendedCardsDelegateSpy.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BD67FFEB2350FEB5003B8D5A /* RecommendedCardsPresenterTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD67FFEC2350FECB003B8D5A /* RecommendedCardsPresenterSpec.swift */,
+				BD67FFEE2350FF44003B8D5A /* DataProviderSpy.swift */,
+			);
+			path = RecommendedCardsPresenterTests;
 			sourceTree = "<group>";
 		};
 		BDA312FA234A2905005E2F84 /* Cells */ = {
@@ -267,7 +291,8 @@
 		BDB7EA41234640FD002FB416 /* RecommendedCardsModuleTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD67FFE52350D912003B8D5A /* RecommendedCardsModuleTests */,
+				BD67FFEB2350FEB5003B8D5A /* RecommendedCardsPresenterTests */,
+				BD67FFE52350D912003B8D5A /* RecommendedCardsControllerTests */,
 				BDB7EA44234640FE002FB416 /* Info.plist */,
 				BDA3134E234D3A38005E2F84 /* RecommendedCardsModuleTests-Bridging-Header.h */,
 			);
@@ -489,6 +514,8 @@
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/FBSnapshotTestCase.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/Nimble_Snapshots.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Repositories.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Entities.framework",
 			);
 			outputFileListPaths = (
 			);
@@ -530,7 +557,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD67FFEF2350FF44003B8D5A /* DataProviderSpy.swift in Sources */,
 				BD67FFE72350D987003B8D5A /* RecommendedCardsPresenterSpy.swift in Sources */,
+				BD67FFE92350F8CE003B8D5A /* RecommendedCardsDelegateSpy.swift in Sources */,
+				BD67FFED2350FECB003B8D5A /* RecommendedCardsPresenterSpec.swift in Sources */,
 				BDA31350234D3A38005E2F84 /* RecommendedCardsControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
