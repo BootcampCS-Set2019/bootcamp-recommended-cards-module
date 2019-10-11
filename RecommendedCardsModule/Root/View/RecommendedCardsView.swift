@@ -31,6 +31,27 @@ class RecommendedCardsView: UIView {
 
     public weak var delegate: RecommendedCardsViewDelegate?
 
+    private(set) lazy var loadingIndicator: UIActivityIndicatorView = {
+        let loading = MagicDesignSystem.Loading.activityIndicator
+        return loading
+    }()
+
+    private(set) lazy var errorState: MagicDesignSystem.ErrorState = {
+        let error = MagicDesignSystem.ErrorState(message: "Could not load cards", buttonText: "Retry")
+        error.errorView.isUserInteractionEnabled = false
+        error.errorView.isHidden = true
+        error.messageLabel.numberOfLines = 3
+        if let button = error.buttonRetry {
+            button.accessibilityIdentifier = MagicDesignSystem
+                .AccessibilityIdentifiers(componentType: .button,
+                                          additionalName: "Error",
+                                          module: .recommendedCards,
+                                          number: nil)
+                .constructedName
+        }
+        return error
+    }()
+
     private(set) lazy var cardsSearchBar: UISearchBar = {
         let searchBar = MagicDesignSystem.SearchBar.searchCardsHorizontalLarge
             .uiSearchBar(placeholder: "Search for cards")
@@ -94,8 +115,10 @@ class RecommendedCardsView: UIView {
 extension RecommendedCardsView: ViewCodable {
     func buildHierarchy() {
         self.addSubview(backgroundView)
+        self.addSubview(loadingIndicator)
         self.addSubview(cardsSearchBar)
         self.addSubview(decksTableView)
+        self.addSubview(errorState.errorView)
 
         self.sendSubviewToBack(backgroundView)
     }
@@ -104,6 +127,17 @@ extension RecommendedCardsView: ViewCodable {
         self.backgroundView.snp.makeConstraints { (maker) in
             maker.height.width.equalToSuperview()
             maker.center.equalToSuperview()
+        }
+
+        self.loadingIndicator.snp.makeConstraints { (maker) in
+            maker.center.equalToSuperview()
+        }
+
+        self.errorState.errorView.snp.makeConstraints { (maker) in
+            maker.centerY.equalTo(self.snp.centerY).offset(50)
+            maker.height.equalTo(300)
+            maker.left.equalTo(self.snp.left).offset(30)
+            maker.right.equalTo(self.snp.right).offset(-30)
         }
 
         self.cardsSearchBar.snp.makeConstraints { (maker) in
