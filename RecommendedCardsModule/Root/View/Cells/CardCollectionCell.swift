@@ -7,16 +7,18 @@
 //
 
 import Components
+import Entities
 import Kingfisher
 import Resources
-import Entities
 
 class CardCollectionCell: UICollectionViewCell {
     static var identifier: String = "DeckTableCell"
 
+    let semaphore = DispatchSemaphore(value: 0)
+
     public var viewModel: Card? {
         didSet {
-            applyViewModel()
+            self.applyViewModel()
         }
     }
 
@@ -43,9 +45,10 @@ class CardCollectionCell: UICollectionViewCell {
         guard let imageUrl = viewModelAux.imageUrl else {
             return
         }
-        let url = URL(string: imageUrl)
-        self.imageView.kf.setImage(with: url,
-                                   placeholder: MagicDesignSystem.Assets.defaultCardArtboard)
+
+        let url = URL(string: imageUrl)!
+        self.imageView.downloaded(from: url)
+
         self.accessibilityIdentifier = MagicDesignSystem
             .AccessibilityIdentifiers(componentType: .collectionViewCell,
                                       additionalName: nil,
@@ -59,11 +62,11 @@ class CardCollectionCell: UICollectionViewCell {
 
 extension CardCollectionCell: ViewCodable {
     func buildHierarchy() {
-        self.addSubview(imageView)
+        self.addSubview(self.imageView)
     }
 
     func buildConstraints() {
-        self.imageView.snp.makeConstraints { (maker) in
+        self.imageView.snp.makeConstraints { maker in
             maker.top.bottom.left.right.equalToSuperview()
         }
     }

@@ -2,4 +2,3 @@ github "https://github.com/BootcampCS-Set2019/bootcamp-components.git" "master"
 github "https://github.com/BootcampCS-Set2019/bootcamp-resources.git" "master"
 github "https://github.com/BootcampCS-Set2019/bootcamp-repositories.git" "master"
 github "SnapKit/SnapKit" ~> 5.0.0
-github "onevcat/Kingfisher" == 5.7.1
