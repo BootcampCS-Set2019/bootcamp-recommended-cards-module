@@ -11,6 +11,7 @@
 		BD67FFDC234F9EDE003B8D5A /* Repositories.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDA3130D234A2E32005E2F84 /* Repositories.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BD67FFDD234F9EF3003B8D5A /* Entities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA31311234A2ED4005E2F84 /* Entities.framework */; };
 		BD67FFDE234F9EF3003B8D5A /* Entities.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDA31311234A2ED4005E2F84 /* Entities.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BD67FFE72350D987003B8D5A /* RecommendedCardsPresenterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD67FFE62350D987003B8D5A /* RecommendedCardsPresenterSpy.swift */; };
 		BDA31303234A2906005E2F84 /* CardCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FB234A2905005E2F84 /* CardCollectionCell.swift */; };
 		BDA31304234A2906005E2F84 /* CardSetTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FC234A2905005E2F84 /* CardSetTableCell.swift */; };
 		BDA31305234A2906005E2F84 /* RecommendedCardsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA312FD234A2905005E2F84 /* RecommendedCardsView.swift */; };
@@ -24,7 +25,7 @@
 		BDA3132C234B8ABB005E2F84 /* Resources.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDAFF4492346737E000256FF /* Resources.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BDA3133B234B9B79005E2F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDA3133A234B9B79005E2F84 /* Assets.xcassets */; };
 		BDA3134C234D3191005E2F84 /* RecommendedCardsModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3134B234D3191005E2F84 /* RecommendedCardsModuleBuilder.swift */; };
-		BDA31350234D3A38005E2F84 /* RecommendedCardsControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerTests.swift */; };
+		BDA31350234D3A38005E2F84 /* RecommendedCardsControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerSpec.swift */; };
 		BDAFF48923468C60000256FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDAFF48823468C60000256FF /* AppDelegate.swift */; };
 		BDAFF49823468CCE000256FF /* RecommendedCardsModule.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */; };
 		BDAFF49923468CCE000256FF /* RecommendedCardsModule.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BDB7EA34234640FD002FB416 /* RecommendedCardsModule.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -67,6 +68,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BD67FFE62350D987003B8D5A /* RecommendedCardsPresenterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsPresenterSpy.swift; sourceTree = "<group>"; };
 		BDA312FB234A2905005E2F84 /* CardCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCollectionCell.swift; sourceTree = "<group>"; };
 		BDA312FC234A2905005E2F84 /* CardSetTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardSetTableCell.swift; sourceTree = "<group>"; };
 		BDA312FD234A2905005E2F84 /* RecommendedCardsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecommendedCardsView.swift; sourceTree = "<group>"; };
@@ -83,7 +85,7 @@
 		BDA3133A234B9B79005E2F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDA3134B234D3191005E2F84 /* RecommendedCardsModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsModuleBuilder.swift; sourceTree = "<group>"; };
 		BDA3134E234D3A38005E2F84 /* RecommendedCardsModuleTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecommendedCardsModuleTests-Bridging-Header.h"; sourceTree = "<group>"; };
-		BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsControllerTests.swift; sourceTree = "<group>"; };
+		BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendedCardsControllerSpec.swift; sourceTree = "<group>"; };
 		BDAFF4482346737E000256FF /* Components.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Components.framework; path = Carthage/Build/iOS/Components.framework; sourceTree = "<group>"; };
 		BDAFF4492346737E000256FF /* Resources.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Resources.framework; path = Carthage/Build/iOS/Resources.framework; sourceTree = "<group>"; };
 		BDAFF48623468C60000256FF /* Sample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -126,6 +128,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD67FFE52350D912003B8D5A /* RecommendedCardsModuleTests */ = {
+			isa = PBXGroup;
+			children = (
+				BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerSpec.swift */,
+				BD67FFE62350D987003B8D5A /* RecommendedCardsPresenterSpy.swift */,
+			);
+			path = RecommendedCardsModuleTests;
+			sourceTree = "<group>";
+		};
 		BDA312FA234A2905005E2F84 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,8 +267,8 @@
 		BDB7EA41234640FD002FB416 /* RecommendedCardsModuleTests */ = {
 			isa = PBXGroup;
 			children = (
+				BD67FFE52350D912003B8D5A /* RecommendedCardsModuleTests */,
 				BDB7EA44234640FE002FB416 /* Info.plist */,
-				BDA3134F234D3A38005E2F84 /* RecommendedCardsControllerTests.swift */,
 				BDA3134E234D3A38005E2F84 /* RecommendedCardsModuleTests-Bridging-Header.h */,
 			);
 			path = RecommendedCardsModuleTests;
@@ -519,7 +530,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDA31350234D3A38005E2F84 /* RecommendedCardsControllerTests.swift in Sources */,
+				BD67FFE72350D987003B8D5A /* RecommendedCardsPresenterSpy.swift in Sources */,
+				BDA31350234D3A38005E2F84 /* RecommendedCardsControllerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
