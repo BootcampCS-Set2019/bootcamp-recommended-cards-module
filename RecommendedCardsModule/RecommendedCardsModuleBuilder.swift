@@ -10,20 +10,9 @@ import Repositories
 import Entities
 
 public class RecommendedCardsModuleBuilder {
-    public weak var delegate: RecommendedCardsDelegate?
-
-    public init() {}
-
-    public func buildRoot(provider: DataProvider) -> UIViewController {
+    public static func buildRoot(provider: DataProvider) -> RecommendedCardsViewController {
         let presenter = RecommendedCardsPresenter(provider: provider)
         let controller = RecommendedCardsViewController(presenter: presenter)
-        controller.delegate = self
         return controller
-    }
-}
-
-extension RecommendedCardsModuleBuilder: RecommendedCardsDelegate {
-    public func didTapCard(card: Card) {
-        delegate?.didTapCard(card: card)
     }
 }

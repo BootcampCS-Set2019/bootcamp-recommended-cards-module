@@ -20,8 +20,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let provider = DataProvider(api: API(session: URLSession.shared))
 
-        window.rootViewController = RecommendedCardsModuleBuilder()
-            .buildRoot(provider: provider)
+        let viewController = RecommendedCardsModuleBuilder.buildRoot(provider: provider)
+        viewController.delegate = self
+        window.rootViewController = viewController
 
         self.window = window
         window.makeKeyAndVisible()
@@ -41,5 +42,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
 
 extension AppDelegate: RecommendedCardsDelegate {
-    func didTapCard(card: Card) {}
+    func didTapCard(card: Card) {
+
+    }
 }
