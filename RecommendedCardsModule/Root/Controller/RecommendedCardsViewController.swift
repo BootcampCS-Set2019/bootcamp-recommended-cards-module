@@ -15,6 +15,8 @@ public class RecommendedCardsViewController: UIViewController {
     var presenter: RecommendedCardsPresenterProtocol
     let mainView = RecommendedCardsView()
     let semaphore = DispatchSemaphore(value: 0)
+    var filter = ""
+    var viewModel: RecommendedCardsViewModel?
 
     public weak var delegate: RecommendedCardsDelegate?
 
@@ -45,7 +47,8 @@ public class RecommendedCardsViewController: UIViewController {
 
                 self.presenter.loadAllCardsOfNextSet().then(on: .main) { helper in
                     self.mainView.loadingIndicator.stopAnimating()
-                    self.apply(viewModel: RecommendedCardsViewModel(sets: [helper]))
+                    self.viewModel = RecommendedCardsViewModel(sets: [helper])
+                    self.applyViewModel()
                 }
             }.catch(on: .main) { error in
                 self.mainView.loadingIndicator.stopAnimating()
@@ -65,8 +68,29 @@ public class RecommendedCardsViewController: UIViewController {
         self.mainView.errorState.errorView.isHidden = true
     }
 
-    func apply(viewModel: RecommendedCardsViewModel) {
-        self.mainView.viewModel = viewModel
+    func applyViewModel() {
+        self.mainView.viewModel = self.viewModel
+    }
+
+    func filterWithViewModel() {
+        let filteredViewModel = mainView.viewModel
+
+        var setsAux = [CardSetHelper]()
+        for set in filteredViewModel!.sets {
+            var typesAux = [CardTypeHelper]()
+            for type in set.types {
+                let filteredCards = type.cards.filter { (card) -> Bool in
+                    return card.name.contains(self.filter)
+                }
+
+                if filteredCards.count > 0 {
+                    typesAux.append(CardTypeHelper(name: type.name, cards: filteredCards))
+                }
+            }
+            setsAux.append(CardSetHelper(set: set.set, types: typesAux))
+        }
+
+        self.mainView.viewModel = RecommendedCardsViewModel(sets: setsAux)
     }
 }
 
@@ -75,5 +99,14 @@ extension RecommendedCardsViewController: RecommendedCardsViewDelegate {
 
     func didTap(card: Card) {
         self.delegate?.didTapCard(card: card)
+    }
+
+    func didSearch(with text: String) {
+        self.filter = text
+        if filter == "" {
+            applyViewModel()
+        } else {
+            filterWithViewModel()
+        }
     }
 }

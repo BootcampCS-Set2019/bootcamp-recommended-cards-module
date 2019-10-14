@@ -19,6 +19,7 @@ struct RecommendedCardsViewModel {
 protocol RecommendedCardsViewDelegate: class {
     func didTap(card: Card)
     func didScroll(_ scrollView: UIScrollView)
+    func didSearch(with text: String)
 }
 
 class RecommendedCardsView: UIView {
@@ -223,5 +224,9 @@ extension RecommendedCardsView: UISearchBarDelegate {
     func searchBarShouldEndEditing(_ searchBar: UISearchBar) -> Bool {
         searchBar.setShowsCancelButton(false, animated: true)
         return true
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        delegate?.didSearch(with: searchBar.text ?? "")
     }
 }
