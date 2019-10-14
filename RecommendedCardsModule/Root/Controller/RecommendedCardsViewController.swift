@@ -12,7 +12,6 @@ public protocol RecommendedCardsDelegate: class {
 }
 
 public class RecommendedCardsViewController: UIViewController {
-
     var presenter: RecommendedCardsPresenterProtocol
     let mainView = RecommendedCardsView()
     let semaphore = DispatchSemaphore(value: 0)
@@ -24,13 +23,14 @@ public class RecommendedCardsViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override public func loadView() {
-        self.view = mainView
-        mainView.delegate = self
+    public override func loadView() {
+        self.view = self.mainView
+        self.mainView.delegate = self
     }
 
     public override func viewDidLoad() {
@@ -39,15 +39,15 @@ public class RecommendedCardsViewController: UIViewController {
     }
 
     private func bringData() {
-        mainView.loadingIndicator.startAnimating()
+        self.mainView.loadingIndicator.startAnimating()
         DispatchQueue.main.async {
             self.presenter.loadSetsAndTypes().then(on: .main) { _ in
 
-                self.presenter.loadAllCardsOfNextSet().then(on: .main) { (helper) in
+                self.presenter.loadAllCardsOfNextSet().then(on: .main) { helper in
                     self.mainView.loadingIndicator.stopAnimating()
                     self.apply(viewModel: RecommendedCardsViewModel(sets: [helper]))
                 }
-            }.catch(on: .main) { (error) in
+            }.catch(on: .main) { error in
                 self.mainView.loadingIndicator.stopAnimating()
                 self.mainView.errorState.errorView.isUserInteractionEnabled = true
                 self.mainView.errorState.errorView.isHidden = false
@@ -71,13 +71,9 @@ public class RecommendedCardsViewController: UIViewController {
 }
 
 extension RecommendedCardsViewController: RecommendedCardsViewDelegate {
+    func didScroll(_ scrollView: UIScrollView) {}
+
     func didTap(card: Card) {
         self.delegate?.didTapCard(card: card)
-    }
-
-    public func didScroll(_ scrollView: UIScrollView) {
-        //        if scrollView.contentOffset.y > scrollView.contentSize.height/3 {
-        //            interactor.loadAllCardsOfNextSet()
-        //        }
     }
 }
