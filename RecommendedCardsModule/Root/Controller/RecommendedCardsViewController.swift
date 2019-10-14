@@ -44,7 +44,6 @@ public class RecommendedCardsViewController: UIViewController {
         self.mainView.loadingIndicator.startAnimating()
         DispatchQueue.main.async {
             self.presenter.loadSetsAndTypes().then(on: .main) { _ in
-
                 self.presenter.loadAllCardsOfNextSet().then(on: .main) { helper in
                     self.mainView.loadingIndicator.stopAnimating()
                     self.viewModel = RecommendedCardsViewModel(sets: [helper])

@@ -50,7 +50,14 @@ class CardCollectionCell: UICollectionViewCell {
             return
         }
 
-        self.imageView.downloaded(from: url)
+        self.imageView.kf.setImage(with: url, placeholder: MagicDesignSystem.Assets.defaultCardArtboard) { result in
+            switch result {
+            case .failure:
+                self.imageView.downloaded(from: url)
+            default:
+                break
+            }
+        }
 
         self.accessibilityIdentifier = MagicDesignSystem
             .AccessibilityIdentifiers(componentType: .collectionViewCell,

@@ -33,7 +33,7 @@ class RecommendedCardsView: UIView {
     public weak var delegate: RecommendedCardsViewDelegate?
 
     private(set) lazy var loadingIndicator: UIActivityIndicatorView = {
-        let loading = MagicDesignSystem.Loading.activityIndicator
+        let loading = MagicDesignSystem.Loading.activityIndicator.uiActiviteIndicator()
         return loading
     }()
 
