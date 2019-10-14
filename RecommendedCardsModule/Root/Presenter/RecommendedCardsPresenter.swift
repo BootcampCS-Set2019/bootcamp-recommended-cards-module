@@ -98,6 +98,8 @@ class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
             if typeAux.cards.count != 0 {
                 future.resolve(value: typeAux)
             }
+
+            self.semaphore.signal()
         }
     }
 
@@ -120,7 +122,6 @@ class RecommendedCardsPresenter: RecommendedCardsPresenterProtocol {
             for type in self.types {
                 loadCard(with: type, and: set).then {
                     helper.types.append($0)
-                    self.semaphore.signal()
                 }.catch {
                     future.reject(error: $0)
                 }
